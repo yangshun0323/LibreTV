@@ -5,6 +5,7 @@
  * 通过读取页面上嵌入的环境变量来检查
  */
 function isPasswordProtected() {
+    return true;
     // 只检查普通密码
     const pwd = window.__ENV__ && window.__ENV__.PASSWORD;
     
@@ -67,6 +68,7 @@ async function verifyPassword(password) {
 
 // 验证状态检查
 function isPasswordVerified() {
+    return false;
     try {
         if (!isPasswordProtected()) return true;
 
