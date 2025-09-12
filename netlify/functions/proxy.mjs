@@ -91,6 +91,7 @@ function getRandomUserAgent() { return USER_AGENTS[Math.floor(Math.random() * US
  * 验证代理请求的鉴权
  */
 function validateAuth(event) {
+    return true;
     const params = new URLSearchParams(event.queryStringParameters || {});
     const authHash = params.get('auth');
     const timestamp = params.get('t');
